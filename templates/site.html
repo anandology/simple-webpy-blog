@@ -3,10 +3,22 @@ $def with (page)
 <html>
 <head>
     <title>Simple Blog</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 </head>
 <body>
-    <h1><a href="/">Simple Blog</a></h1>
+	<nav class="navbar navbar-default">
+	  <div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="/">Simple Blog</a>
+	    </div>
+	  </div>
+	</nav>
 
-    $:page
+    <div class="container">
+	$:page
+    </div>
 </body>
 </html>
