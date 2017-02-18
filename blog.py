@@ -3,18 +3,16 @@ import web
 import db
 
 urls = (
-        "/", "index"
-    )
+   "/", "index"
+)
+render = web.template.render("templates")
 
 app = web.application(urls, globals())
 
 class index:
     def GET(self):
         posts = db.get_posts()
-        output = ""
-        for p in posts:
-            output += "<br>" + p.title
-        return output
+        return render.index(posts)
 
 if __name__ == "__main__":
     app.run()

@@ -1,0 +1,16 @@
+$def with (posts)
+<!doctype html>
+<html>
+<head>
+    <title>Simple Blog</title>
+</head>
+<body>
+    <h1>Simple Blog</h1>
+
+    $for p in posts:
+        <div>
+            <h2><a href="/$p.slug">$p.title</a></h2>
+            <p>$p.body</p>
+        </div>
+</body>
+</html>
