@@ -19,6 +19,8 @@ class index:
 class post:
     def GET(self, slug):
         p = db.get_post(slug)
+        if not p:
+            raise web.notfound()
         return render.site(render.post(p))
 
 class newpost:
