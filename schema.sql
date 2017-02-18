@@ -5,7 +5,7 @@
 --    sqlite3 blog.db < schema.sql
 --
 create table post (
-	id integer auto increment primary key,
+	id integer primary key autoincrement,
 	slug text unique,
 	title text,
 	body text,
