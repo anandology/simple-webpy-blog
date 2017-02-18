@@ -13,12 +13,12 @@ app = web.application(urls, globals())
 class index:
     def GET(self):
         posts = db.get_posts()
-        return render.index(posts)
+        return render.site(render.index(posts))
 
 class post:
     def GET(self, slug):
         p = db.get_post(slug)
-        return render.post(p)
+        return render.site(render.post(p))
 
 if __name__ == "__main__":
     app.run()
