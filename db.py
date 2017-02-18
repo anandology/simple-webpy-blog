@@ -5,7 +5,7 @@ import web
 db = web.database(dbn="sqlite", db="blog.db")
 
 def get_posts():
-    return db.select("post")
+    return db.select("post", order="created desc")
 
 def get_post(slug):
     return db.where("post", slug=slug).first()
